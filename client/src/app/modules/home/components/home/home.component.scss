@@ -1,0 +1,18 @@
+.page_wrapper {
+   display: flex;
+   flex-direction: column;
+   height: 100%;
+
+   .header {
+      display: flex;
+      align-items: center;
+      height: 10rem;
+      background-color: var(--main-bg-color);
+      padding: 0 3rem;
+   }
+
+   .content {
+      height: calc(100% - 3rem);
+      overflow: hidden;
+   }
+}

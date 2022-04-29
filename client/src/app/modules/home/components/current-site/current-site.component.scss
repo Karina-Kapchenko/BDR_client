@@ -1,0 +1,205 @@
+.scroll_wrapper {
+   height: 100%;
+   padding: 0 8rem;
+
+   .information-block {
+      display: flex;
+      justify-content: space-between;
+      margin: 4rem 0 7rem 0;
+
+      .website_name {
+         display: flex;
+         flex-direction: column;
+
+         h2 {
+            font-family: "Open Sans";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 42px;
+            line-height: 44px;
+            margin: 0;
+            color: #000000;
+         }
+
+         .description {
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 34px;
+            line-height: 56px;
+            color: #332c37;
+         }
+      }
+
+      .websites_stats {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+
+         .users_count {
+            font-family: "Open Sans";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 78px;
+            line-height: 106px;
+            color: #000000;
+            margin: 0;
+            margin-right: 1.5rem;
+         }
+      }
+   }
+
+   .recomendation_list {
+      display: flex;
+      flex-direction: column;
+
+      mat-expansion-panel {
+         background: #f4edf5;
+
+         mat-expansion-panel-header {
+            -webkit-box-shadow: 0px 6px 19px 0px rgba(156, 156, 156, 0.2);
+            -moz-box-shadow: 0px 6px 19px 0px rgba(156, 156, 156, 0.2);
+            box-shadow: 0px 6px 19px 0px rgba(156, 156, 156, 0.2);
+         }
+
+         .accordion_content {
+            padding: 4rem 3rem 3rem 5rem;
+            display: flex;
+
+            .score {
+               width: 15%;
+               display: flex;
+               flex-direction: column;
+               justify-content: center;
+               align-items: center;
+               margin-right: 5rem;
+
+               h1 {
+                  font-family: "Open Sans";
+                  font-style: normal;
+                  font-weight: 600;
+                  font-size: 96px;
+                  line-height: 100px;
+                  color: #70458a;
+                  margin-bottom: 0.2rem !important;
+               }
+
+               p {
+                  font-family: "Open Sans";
+                  font-style: normal;
+                  font-weight: 600;
+                  font-size: 46px;
+                  line-height: 50px;
+                  color: #70458a;
+                  margin: 0;
+               }
+            }
+
+            .detail_info {
+               display: flex;
+               flex-direction: column;
+
+               h3 {
+                  font-family: "Roboto";
+                  font-style: normal;
+                  font-weight: 500;
+                  font-size: 30px;
+                  line-height: 35px;
+                  color: #000000;
+                  margin: 0;
+                  margin-bottom: 1rem;
+               }
+
+               .detail_info_more_stats {
+                  margin-bottom: 3.5rem;
+
+                  .stats_table {
+                     display: grid;
+                     grid-auto-columns: 1fr;
+                     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+                     grid-template-rows: 1fr 1fr;
+                     gap: 12px;
+                     width: max-content;
+
+                     .stats_ceil {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 8rem;
+                        height: 4rem;
+                        background-color: #B466C0;
+                        border-radius: 6px;
+
+                        p {
+                           margin: 0;
+                           font-family: "Open Sans";
+                           font-style: normal;
+                           font-weight: 600;
+                           font-size: 20px;
+                           line-height: 24px;
+                           color: #141414;
+                        }
+
+                        .small_icon {
+                           width: 22px;
+                           height: 22px;
+                        }
+
+                        .users_count {
+                           font-size: 18px !important;
+                           margin-right: 4px;
+                           line-height: 20px;
+                        }
+                     }
+                  }
+               }
+
+               .recomendation_text {
+                  font-family: "Open Sans";
+                  font-style: normal;
+                  font-weight: 400;
+                  font-size: 26px;
+                  line-height: 35px;
+                  color: #5b5261;
+                  margin: 0;
+               }
+            }
+         }
+      }
+
+      .website_list_element {
+         display: flex;
+         align-items: center;
+         background: #f4edf5;
+         border-radius: 8px;
+         padding: 3rem 4.5rem;
+
+         .icon {
+            margin-right: 3rem;
+         }
+
+         h3 {
+            font-family: "Open Sans";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 34px;
+            line-height: 36px;
+            color: #150220;
+            margin: 0;
+            margin-right: 6rem;
+         }
+
+         .score {
+            font-family: "Open Sans";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 32px;
+            line-height: 40px;
+            color: #150220;
+            margin: 0;
+            margin-left: auto;
+            margin-right: 1rem;
+         }
+      }
+   }
+}

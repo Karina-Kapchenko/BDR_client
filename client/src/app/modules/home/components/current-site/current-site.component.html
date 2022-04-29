@@ -1,0 +1,94 @@
+<div class="scroll_wrapper">
+   <div class="information-block">
+      <div class="website_name">
+         <h2>KariKapp</h2>
+         <p class="description">description of site</p>
+      </div>
+
+      <div class="websites_stats">
+         <h3 class="users_count">256</h3>
+         <img src="assets/img/peoples.png">
+      </div>
+   </div>
+
+   <div class="recomendation_list">
+      <mat-accordion>
+         <mat-expansion-panel hideToggle #panel>
+            <mat-expansion-panel-header class="website_list_element">
+
+               <h3>Font style</h3>
+
+               <p class="score">3,2</p>
+
+               <img class="icon" src="assets/img/star.png">
+
+               <div class="arrow">
+                  <img *ngIf="panel.expanded" src="assets/img/close_p.png">
+                  <img *ngIf="!panel.expanded" src="assets/img/open_p.png">
+               </div>
+            </mat-expansion-panel-header>
+            <div class="accordion_content">
+               <div class="score">
+                  <h1>4,6</h1>
+                  <p>Valuation</p>
+               </div>
+               <div class="detail_info">
+                  <div class="detail_info_more_stats">
+                     <h3>Detail statistics</h3>
+                     <div class="stats_table">
+                        <div class="stats_ceil">
+                           <p>1</p>
+                           <img src="assets/img/star.png" class="small_icon">
+                        </div>
+                        <div class="stats_ceil">
+                           <p>2</p>
+                           <img src="assets/img/star.png" class="small_icon">
+                        </div>
+                        <div class="stats_ceil">
+                           <p>3</p>
+                           <img src="assets/img/star.png" class="small_icon">
+                        </div>
+                        <div class="stats_ceil">
+                           <p>4</p>
+                           <img src="assets/img/star.png" class="small_icon">
+                        </div>
+                        <div class="stats_ceil">
+                           <p>5</p>
+                           <img src="assets/img/star.png" class="small_icon">
+                        </div>
+                        <div class="stats_ceil">
+                           <p class="users_count">5</p>
+                           <img src="assets/img/peoples.png" class="small_icon">
+                        </div>
+                        <div class="stats_ceil">
+                           <p class="users_count">5</p>
+                           <img src="assets/img/peoples.png" class="small_icon">
+                        </div>
+                        <div class="stats_ceil">
+                           <p class="users_count">5</p>
+                           <img src="assets/img/peoples.png" class="small_icon">
+                        </div>
+                        <div class="stats_ceil">
+                           <p class="users_count">5</p>
+                           <img src="assets/img/peoples.png" class="small_icon">
+                        </div>
+                        <div class="stats_ceil">
+                           <p class="users_count">5</p>
+                           <img src="assets/img/peoples.png" class="small_icon">
+                        </div>
+                     </div>
+                  </div>
+                  <div class="recomendation_info">
+                     <h3>Recomendations</h3>
+                     <p class="recomendation_text">Pellentesque habitant morbi tristique senectus et netus et malesuada
+                        fames ac turpis egestas
+                        pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                     </p>
+                  </div>
+
+               </div>
+            </div>
+         </mat-expansion-panel>
+      </mat-accordion>
+   </div>
+</div>

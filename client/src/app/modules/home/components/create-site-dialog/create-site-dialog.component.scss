@@ -1,0 +1,31 @@
+.dialog_wrapper {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding: 1rem;
+
+   h2 {
+      font-family: "Open Sans";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 49px;
+      color: #150220;
+      margin-bottom: 3rem;
+   }
+
+   form {
+      display: grid;
+      grid-auto-columns: 1fr;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      margin-bottom: 3rem;
+      max-width: 68rem;
+      width: 100%;
+   }
+
+   button {
+      width: auto;
+   }
+}

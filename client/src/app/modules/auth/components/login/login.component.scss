@@ -1,0 +1,38 @@
+.auth-component-block {
+   background-color: white;
+   width: 113.2rem;
+   min-height: 44rem;
+   border-radius: 2.4rem;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+
+   .block_headline {
+      font-family: "Open Sans";
+      font-style: normal;
+      font-weight: 800;
+      font-size: 36px !important;
+      color: #150220;
+      margin: 9rem 0 1.5rem 0;
+   }
+
+   .block_paragraph {
+      font-family: "Open Sans";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px !important;
+      color: #141414;
+      margin: 0 0 6.6rem 0;
+   }
+
+   .form-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+
+      .auth_input {
+         width: 35.2rem;
+         display: flex;
+      }
+   }
+}
