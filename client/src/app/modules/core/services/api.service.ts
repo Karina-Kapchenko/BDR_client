@@ -12,18 +12,18 @@ export class ApiService {
   baseApiUrl = environment.apiUrl
 
   public login(loginData: any) {
-    return this.http.get(this.baseApiUrl + `/login`, loginData);
+    return this.http.post(this.baseApiUrl + `/login`, loginData);
   }
   
   public register(registerData: any) {
-    return this.http.get(this.baseApiUrl + `/register`, registerData);
+    return this.http.post(this.baseApiUrl + `/register`, registerData);
   }
 
   public createWebsiteForQuestions(createWebsite: any) {
     return this.http.post(this.baseApiUrl + `/questions`, createWebsite);
   }
 
-  public getAllWebsitesForQuestions() {
+  public getAllWebsites() {
     return this.http.get(this.baseApiUrl + `/questions`);
   }
 

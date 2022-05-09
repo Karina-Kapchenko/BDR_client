@@ -1,0 +1,45 @@
+<div class="page_wrapper">
+   <div class="logo">
+      <img src="assets/img/logo_color.png" class="logo">
+   </div>
+   <div class="stage_quiz" *ngIf="current_stage === 'start'">
+      <div class="info">
+         <h2>{{currentSite.name}}</h2>
+         <p>{{currentSite.link}}</p>
+         <button mat-button class="main-btn" (click)="startSurvey()">Begin</button>
+      </div>
+   </div>
+   <div class="stage_quiz" *ngIf="current_stage === 'active'">
+      <div class="question_wrapper" *ngFor="let question of questionsArray; let i = index">
+         <div class="question" *ngIf = 'acitveQuestion === question.id'>
+            <p class="question_text">{{ question.name }}</p>
+            <div class="scores" (click)="createAnswer($event)">
+               <div id="score" data-value="1" class="score_block">
+                  <p>1</p>
+               </div>
+               <div id="score" data-value="2" class="score_block">
+                  <p>2</p>
+               </div>
+
+               <div id="score" data-value="3" class="score_block">
+                  <p>3</p>
+               </div>
+
+               <div id="score" data-value="4" class="score_block">
+                  <p>4</p>
+               </div>
+
+               <div id="score" data-value="5" class="score_block">
+                  <p>5</p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="stage_quiz" *ngIf="current_stage === 'end'">
+      <div class="info">
+         <h2>Thanks for answers</h2>
+         <button mat-button class="main-btn" (click)="openLink()">OK</button>
+      </div>
+   </div>
+</div>

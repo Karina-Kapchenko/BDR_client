@@ -1,0 +1,111 @@
+.page_wrapper {
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+
+   .logo {
+      margin: 4rem 0 7rem 0;
+   }
+
+   .stage_quiz {
+      .info {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+
+         h2 {
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 86px;
+            line-height: 90px;
+            color: #150220;
+            margin: 0;
+            margin-bottom: 1.5rem;
+         }
+
+         p {
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 68px;
+            line-height: 70px;
+            color: #332c37;
+            margin: 0;
+         }
+
+         button {
+            width: 40rem;
+            height: 12rem !important;
+            border-radius: 62px !important;
+            font-family: "Open Sans";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 40px;
+            color: #ffffff;
+            margin-top: 6rem;
+         }
+      }
+
+      .question_wrapper {
+         display: flex;
+
+         .question {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .question_text {
+               font-family: "Open Sans";
+               font-style: normal;
+               font-weight: 600;
+               font-size: 72px;
+               line-height: 80px;
+               color: #150220;
+               margin: 0;
+               margin-bottom: 1rem;
+            }
+
+            .scores {
+               display: grid;
+               grid-auto-columns: 1fr;
+               grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+               gap: 6.6rem;
+               margin-top: 6rem;
+
+               .score_block {
+                  width: 12rem;
+                  height: 12rem;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  background: #70458a;
+                  border-radius: 12px;
+                  cursor: pointer;
+
+                  &:hover {
+                     filter: drop-shadow(0px 0px 26px #b466c0);
+                     transition: 0.3s;
+                  }
+
+                  &_active {
+                     filter: drop-shadow(0px 0px 26px #b466c0);
+                  }
+
+                  p {
+                     margin: 0;
+                     font-family: "Open Sans";
+                     font-style: normal;
+                     font-weight: 600;
+                     font-size: 66px;
+                     line-height: 70px;
+                     color: #f4edf5;
+                  }
+               }
+            }
+         }
+      }
+   }
+}

@@ -1,6 +1,7 @@
 .scroll_wrapper {
    height: 100%;
    padding: 0 8rem;
+   overflow-y: scroll;
 
    .information-block {
       display: flex;
@@ -26,6 +27,8 @@
          background: #f4edf5;
          border-radius: 8px;
          padding: 3rem 4.5rem;
+         margin: 1rem 0;
+         cursor: pointer;
 
          .icon {
             margin-right: 3rem;

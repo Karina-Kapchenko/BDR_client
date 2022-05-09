@@ -1,18 +1,18 @@
 <div class="scroll_wrapper">
    <div class="information-block">
       <h2>KariKapp</h2>
-      <button mat-button class="main-btn">Add New Site</button>
+      <button mat-button class="main-btn" (click)="openCreateDialog()">Add New Site</button>
    </div>
 
    <div class="websites_list">
-      <div class="website_list_element">
+      <div class="website_list_element" *ngFor="let website of websites" (click)="openWebsite(website)">
          <img class="icon" src="assets/img/icon_link.png">
 
-         <h3>Text</h3>
+         <h3>{{website.name}}</h3>
 
-         <p>http://jetiq.vntu.edu.ua</p>
+         <p>{{website.link}}</p>
 
-         <p class="score">3,2</p>
+         <p class="score">{{website.average}}</p>
 
          <img class="open_icon" src="assets/img/next.png">
       </div>

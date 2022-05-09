@@ -1,37 +1,33 @@
 <div class="auth-component-block">
    <h2 class="block_headline">Sign in Now</h2>
 
-   <form class="form-wrapper">
+   <form class="form-wrapper" [formGroup] ='registerFormGroup'>
       <div class="auth_input">
          <mat-form-field appearance="outline" class="input_element">
-            <mat-label>Your email</mat-label>
-            <input matInput placeholder="Placeholder">
+            <input matInput placeholder="Email" formControlName="email">
          </mat-form-field>
       </div>
 
       <div class="auth_input">
          <mat-form-field appearance="outline" class="input_element">
-            <mat-label>Your email</mat-label>
-            <input matInput placeholder="Placeholder">
+            <input matInput placeholder="Name" formControlName="name">
          </mat-form-field>
       </div>
 
       <div class="auth_input">
          <mat-form-field appearance="outline" class="input_element">
-            <mat-label>Your email</mat-label>
-            <input matInput placeholder="Placeholder">
+            <input matInput placeholder="Password" formControlName="password">
          </mat-form-field>
       </div>
 
       <div class="auth_input">
          <mat-form-field appearance="outline" class="input_element">
-            <mat-label>Your password</mat-label>
-            <input matInput placeholder="Placeholder">
+            <input matInput placeholder="Confirm password" formControlName="submit_password">
          </mat-form-field>
       </div>
 
    </form>
 
-   <button mat-button class="main-btn">Sign in</button>
+   <button mat-button class="main-btn" (click)="onSubmitReigsterForm()">Sign in</button>
 
 </div>

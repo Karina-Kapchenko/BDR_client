@@ -4,7 +4,7 @@
 /* ======== Angular material custom themes ======== */
 $my-custom-primary: mat-palette($mat-purple, 400);
 $my-custom-accent: mat-palette($mat-pink, 100, 500, A100);
-$my-custom-warn: mat-palette($mat-lime);
+$my-custom-warn: mat-palette($mat-red);
 
 $my-custom-theme: mat-light-theme($my-custom-primary, $my-custom-accent, $my-custom-warn);
 
@@ -41,6 +41,7 @@ body {
 .mat-form-field-appearance-outline .mat-form-field-flex {
   height: 6.4rem !important;
   align-items: center;
+  padding: 0 .75em 0 1.65em !important;
 }
 
 .mat-form-field {
@@ -73,4 +74,10 @@ body {
 
 .mat-expansion-panel-body {
   padding: 0 !important;
+}
+
+.error_msg {
+  color: red;
+  font-size: 14px;
+  
 }

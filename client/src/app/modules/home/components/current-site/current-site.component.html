@@ -1,24 +1,24 @@
 <div class="scroll_wrapper">
    <div class="information-block">
       <div class="website_name">
-         <h2>KariKapp</h2>
-         <p class="description">description of site</p>
+         <h2>{{websiteData.name}}</h2>
+         <p class="description">{{websiteData.description}}</p>
       </div>
 
       <div class="websites_stats">
-         <h3 class="users_count">256</h3>
+         <h3 class="users_count">{{websiteData.passed_count}}</h3>
          <img src="assets/img/peoples.png">
       </div>
    </div>
 
    <div class="recomendation_list">
       <mat-accordion>
-         <mat-expansion-panel hideToggle #panel>
+         <mat-expansion-panel hideToggle #panel *ngFor="let property of websiteData.answers">
             <mat-expansion-panel-header class="website_list_element">
 
-               <h3>Font style</h3>
+               <h3>{{property.propertyName}}</h3>
 
-               <p class="score">3,2</p>
+               <p class="score">{{+property.average}}</p>
 
                <img class="icon" src="assets/img/star.png">
 
@@ -29,7 +29,7 @@
             </mat-expansion-panel-header>
             <div class="accordion_content">
                <div class="score">
-                  <h1>4,6</h1>
+                  <h1>{{+property.average}}</h1>
                   <p>Valuation</p>
                </div>
                <div class="detail_info">
@@ -57,23 +57,23 @@
                            <img src="assets/img/star.png" class="small_icon">
                         </div>
                         <div class="stats_ceil">
-                           <p class="users_count">5</p>
+                           <p class="users_count">{{property.oneCount}}</p>
                            <img src="assets/img/peoples.png" class="small_icon">
                         </div>
                         <div class="stats_ceil">
-                           <p class="users_count">5</p>
+                           <p class="users_count">{{property.twoCount}}</p>
                            <img src="assets/img/peoples.png" class="small_icon">
                         </div>
                         <div class="stats_ceil">
-                           <p class="users_count">5</p>
+                           <p class="users_count">{{property.threeCount}}</p>
                            <img src="assets/img/peoples.png" class="small_icon">
                         </div>
                         <div class="stats_ceil">
-                           <p class="users_count">5</p>
+                           <p class="users_count">{{property.fourthCount}}</p>
                            <img src="assets/img/peoples.png" class="small_icon">
                         </div>
                         <div class="stats_ceil">
-                           <p class="users_count">5</p>
+                           <p class="users_count">{{property.fivesCount}}</p>
                            <img src="assets/img/peoples.png" class="small_icon">
                         </div>
                      </div>

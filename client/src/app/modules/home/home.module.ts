@@ -6,6 +6,7 @@ import { CurrentSiteComponent } from './components/current-site/current-site.com
 import { CreateSiteDialogComponent } from './components/create-site-dialog/create-site-dialog.component';
 import { HomeRoutingModule } from './home-routing.module';
 import { SharedModule } from '../shared/shared.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -19,7 +20,9 @@ import { SharedModule } from '../shared/shared.module';
   imports: [
     CommonModule,
     HomeRoutingModule,
-    SharedModule
+    SharedModule,
+    FormsModule,
+    ReactiveFormsModule,
   ]
 })
 export class HomeModule { }
