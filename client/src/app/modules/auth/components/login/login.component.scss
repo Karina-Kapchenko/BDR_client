@@ -6,6 +6,20 @@
    display: flex;
    flex-direction: column;
    align-items: center;
+   position: relative;
+
+   .toggle_btn {
+      position: absolute;
+      font-family: "Open Sans";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 27px;
+      color: #70458a;
+      cursor: pointer;
+      top: 4rem;
+      right: 10rem;
+   }
 
    .block_headline {
       font-family: "Open Sans";

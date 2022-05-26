@@ -24,8 +24,6 @@ body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
-
-
 .main-btn {
   height: 6.05rem !important;
   min-width: 19.2rem !important;
@@ -41,7 +39,7 @@ body {
 .mat-form-field-appearance-outline .mat-form-field-flex {
   height: 6.4rem !important;
   align-items: center;
-  padding: 0 .75em 0 1.65em !important;
+  padding: 0 0.75em 0 1.65em !important;
 }
 
 .mat-form-field {
@@ -71,7 +69,6 @@ body {
   }
 }
 
-
 .mat-expansion-panel-body {
   padding: 0 !important;
 }
@@ -79,5 +76,6 @@ body {
 .error_msg {
   color: red;
   font-size: 14px;
-  
+  margin: 20px 10rem 20px 10rem !important;
+  align-self: flex-start;
 }

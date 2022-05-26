@@ -1,4 +1,5 @@
 <div class="auth-component-block">
+   <p class="toggle_btn" (click)="toSignIn()">Sign in</p>
    <h2 class="block_headline">Sign in Now</h2>
 
    <form class="form-wrapper" [formGroup] ='registerFormGroup'>
@@ -27,6 +28,8 @@
       </div>
 
    </form>
+
+   <p class="error_msg" *ngIf="error_msg">{{error_msg}}</p>
 
    <button mat-button class="main-btn" (click)="onSubmitReigsterForm()">Sign in</button>
 

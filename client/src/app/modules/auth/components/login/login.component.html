@@ -1,4 +1,5 @@
 <div class="auth-component-block">
+   <p class="toggle_btn" (click)="toSignUp()">Sign up</p>
    <h2 class="block_headline">Sign in Now</h2>
    <p class="block_paragraph">Enter personal details to your employee account</p>
 
@@ -20,5 +21,5 @@
       
       <button type="button" mat-button class="main-btn" (click)="onSubmitLoginForm()">Sign in</button>
    </form>
-   <!-- <p class="error_msg">Ошибка</p> -->
+   <p class="error_msg" *ngIf="error_msg">{{error_msg}}</p>
 </div>

@@ -5,12 +5,14 @@
    </div>
 
    <div class="websites_list">
-      <div class="website_list_element" *ngFor="let website of websites" (click)="openWebsite(website)">
+      <div class="website_list_element" *ngFor="let website of websites" (click)="openWebsite(website, $event)">
          <img class="icon" src="assets/img/icon_link.png">
 
          <h3>{{website.name}}</h3>
 
          <p>{{website.link}}</p>
+
+         <img class="copy_icon" src="assets/img/copy.png" (click)="copyLink(website, $event)">
 
          <p class="score">{{website.average}}</p>
 

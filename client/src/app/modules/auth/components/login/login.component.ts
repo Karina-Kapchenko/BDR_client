@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
+  public error_msg = ''
   public loginFormGroup = new FormGroup({
     email: new FormControl('', [Validators.required, Validators.email]),
     password: new FormControl('', [
@@ -32,9 +33,17 @@ export class LoginComponent implements OnInit {
       return;
     }
     this.apiService.login(formData).subscribe((loginResp: any) => {
-      this.userService.user = loginResp;
-      localStorage.setItem('userId', loginResp.id);
-      this.router.navigate(['/home/websites']);
+      if(loginResp.status) {
+        this.userService.user = loginResp.data;
+        localStorage.setItem('userId', loginResp.data.id);
+        this.router.navigate(['/home/websites']);
+      } else {
+        this.error_msg = loginResp.error
+      }
     });
+  }
+
+  toSignUp() {
+    this.router.navigate(['/auth/register'])
   }
 }

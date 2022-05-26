@@ -7,13 +7,16 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-sites',
   templateUrl: './sites.component.html',
-  styleUrls: ['./sites.component.scss']
+  styleUrls: ['./sites.component.scss'],
 })
 export class SitesComponent implements OnInit {
+  constructor(
+    public dialog: MatDialog,
+    private apiService: ApiService,
+    private router: Router
+  ) {}
 
-  constructor(public dialog: MatDialog, private apiService: ApiService, private router: Router) { }
-  
-  public websites: any = []
+  public websites: any = [];
 
   ngOnInit(): void {
     // this.openCreateDialog();
@@ -24,24 +27,35 @@ export class SitesComponent implements OnInit {
     this.apiService.getAllWebsites().subscribe((allWebsitesRes: any) => {
       console.log(allWebsitesRes);
       this.websites = allWebsitesRes.map((website: any) => {
-        return {...website, average: website.average ? (+website.average).toFixed(1) : 0}
-      })
-    })
+        return {
+          ...website,
+          average: website.average ? (+website.average).toFixed(1) : 0,
+        };
+      });
+    });
   }
 
   openCreateDialog() {
     const createWebsiteDialog = this.dialog.open(CreateSiteDialogComponent, {
-      width: '100rem'
-    })
+      width: '100rem',
+    });
 
-    createWebsiteDialog.afterClosed().subscribe(createdElement => {
-      if(createdElement) {
-        this.websites.push({...createdElement, average: 0})
+    createWebsiteDialog.afterClosed().subscribe((createdElement) => {
+      if (createdElement) {
+        this.websites.push({ ...createdElement, average: 0 });
       }
-    })
+    });
   }
 
-  openWebsite(website: any) {
-    this.router.navigate([`/home/websites/${website.id}`])
+  async copyLink(website: any, event: any) {
+    const text = `localhost:4200/survey/${website.id}`;
+    await navigator.clipboard.writeText(text)
+  }
+
+  openWebsite(website: any, event: any) {
+    if (event.target.nodeName === 'IMG') {
+      return;
+    }
+    this.router.navigate([`/home/websites/${website.id}`]);
   }
 }

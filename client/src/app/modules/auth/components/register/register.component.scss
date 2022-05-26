@@ -6,6 +6,20 @@
    display: flex;
    flex-direction: column;
    align-items: center;
+   position: relative;
+
+   .toggle_btn {
+      position: absolute;
+      font-family: "Open Sans";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 27px;
+      color: #70458a;
+      cursor: pointer;
+      top: 4rem;
+      right: 10rem;
+   }
 
    .block_headline {
       font-family: "Open Sans";
@@ -24,11 +38,16 @@
       gap: 3.2rem 8.4rem; 
       align-items: center;
       gap: 3rem;
-      margin-bottom: 4rem;
+      margin-bottom: 2rem;
 
       .auth_input {
          width: 35.2rem;
          display: flex;
       }
+   }
+
+   .error_msg {
+      align-self: center !important;
+      margin: 0 0 1rem 0 !important;
    }
 }
